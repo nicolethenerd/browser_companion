@@ -16,6 +16,10 @@ var characters =
 		{
 			"urls": ["epicurious", "allrecipes"],
 			"text": "Every time you don't eat local a farmer's child can't afford shoes.... Think about it asshole."
+		},
+		{
+			"urls": ["twitter"],
+			"text": "While you struggle to come up with 140 characters of original content that copy of Kerouac gathers another layer of dust."
 		}]
 	},
 	"bieber": {
@@ -38,7 +42,11 @@ var characters =
 		"name": "Subway Rat",
 		"text": [{
 			"urls": ["webmd"],
-			"text":"Hopefully you’re not dying. That’d be a real bummer if you died with so little to show for yourself."
+			"text": "Hopefully you’re not dying. That’d be a real bummer if you died with so little to show for yourself."
+		},
+		{
+			"urls": ["twitter"],
+			"text": "Even I have more social interaction than you do."
 		}]
 	}
 }
@@ -109,6 +117,10 @@ jQuery(document).ready(function($) {
 			//TBD
 		} else {
 			//TBD
+		}
+		else if(companion_id === "rat")
+		{
+			$("#character").addClass("animation-target");
 		}
 	});
    
