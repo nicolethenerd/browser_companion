@@ -12,11 +12,16 @@ var characters =
 		{
 			"urls": ["okcupid", "match.com"],
 			"text": "Dude, I hope you filtered out the fatties and the uggos this time!"
+		},
+		{
+			"urls": ["stackoverflow", "ycombinator"],
+			"text": "Time to bro down and crush some code!"
 		}
-		]
+		],
+		"animation": "up-and-down"
 	},
 	"hipster": {
-		"name": "Hipster",
+		"name": "Hipster Harry",
 		"text" :[{
 			"urls": ["okcupid", "match.com"],
 			"text": "Getting married isn’t a race. It’s more like an exclusive club you probably won’t get into."
@@ -27,23 +32,24 @@ var characters =
 		},
 		{
 			"urls": ["epicurious", "allrecipes"],
-			"text": "Every time you don't eat local a farmer's child can't afford shoes.... Think about it asshole."
+			"text": "Every time you don't eat local, a farmer's child can't afford shoes.... Think about it, asshole."
 		},
 		{
 			"urls": ["twitter"],
-			"text": "While you struggle to come up with 140 characters of original content that copy of Kerouac gathers another layer of dust."
-		}]
+			"text": "While you struggle to come up with 140 characters of original content, that copy of Kerouac gathers another layer of dust."
+		}],
+		"animation": "up-and-down"
 	},
 	"bieber": {
 		"name": "Justin Bieber",
 		"text": [{
 			"urls": ["twitter"],
-			"text": "Baby, baby, baby…you’re super witty and clever. Just not within the confines of 140 characters."
+			"text": "Baby, baby, baby... you’re super witty and clever. Just not within the confines of 140 characters."
 		}],
 		"animation": "up-and-down"
 	},
 	"kale": {
-		"name": "Kale",
+		"name": "Judgy Kale",
 		"text": [
 			{
 				"urls": ["epicurious", "allrecipes"],
@@ -63,7 +69,7 @@ var characters =
 			"text": "Even I have more social interaction than you do."
 		},
 		{
-			"urls": ["reddit"],
+			"urls": ["reddit", "4chan", "buzzfeed"],
 			"text": "Everyday I manage to avoid rat poison and deadly traps and you can't even steer past click-bait."
 		}],
 		"animation": "back-and-forth"
@@ -82,12 +88,13 @@ var characters =
 		"animation": "up-and-down"
 	},
 	"snitch": {
-		"name": "snitch",
+		"name": "The Golden Snitch",
 		"text": [
 			{
 				"urls": ["harrypotter"],
 				"text": "Catch me if you can!"
-			}]
+			}],
+		"animation": "back-and-forth"
 	}
 }
 
@@ -124,7 +131,7 @@ function displayCharacter() {
 		$(".tooltip").html(textToDisplay);
 		$(".tooltip").css('opacity', 1);
 
-		if (companion_id === "hipster") {
+		/*if (companion_id === "hipster") {
 			//animateHipster();
 		} else if (companion_id === "bieber") {
 			animateBieber();
@@ -134,9 +141,9 @@ function displayCharacter() {
 			animateSnitch();
 		}
 		else
-		{
+		{*/
 			$("#character img").addClass(characters[companion_id].animation);
-		}
+	//	}
 	}
 	
 }
