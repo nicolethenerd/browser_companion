@@ -1,18 +1,22 @@
-var characterText = [
-	{
-		"urls": ["google", "bing"],
-		"text": "gooooogle"
-	},
-	{
-		"urls": ["twitter"],
-		"text": "You're on Twitter!"
+//TODO put characters in separate json file
+var characters = 
+{
+	"hipster": {
+		"name": "Hipster",
+		"text" :[{
+			"urls": ["google", "bing"],
+			"text": "gooooogle"
+		},
+		{
+			"urls": ["twitter"],
+			"text": "You're on Twitter!"
+		}]
 	}
-]
-
-var HIPSTER_URL = chrome.extension.getURL('hipster.png');
+}
 
 function getMatchText() {
-	//TODO put characterText in separate json file
+	var characterText = characters.hipster.text;
+
     for(var i = 0; i < characterText.length; i++)
     {
     	var matchObject = characterText[i];
@@ -39,7 +43,10 @@ function displayText() {
 }
 
 jQuery(document).ready(function($) {
-    $("body").append("<div id='character'><img src='"+ HIPSTER_URL +"'><span class='tooltip hide'></span></div>");
+
+	var IMG_URL = chrome.extension.getURL('hipster.png');
+
+    $("body").append("<div id='character'><img src='"+ IMG_URL +"'><span class='tooltip hide'></span></div>");
 
     displayText();
 }); //document ready
