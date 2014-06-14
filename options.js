@@ -18,7 +18,7 @@
 	function restore_options() {
 	  // Use default values
 	  chrome.storage.sync.get({
-	    companion: 'hipster'
+	    companion: 'bro'
 	  }, function(items) {
 	    document.getElementById('companion').value = items.companion;
 	  });

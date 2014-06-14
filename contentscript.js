@@ -12,7 +12,8 @@ var characters =
 		{
 			"urls": ["okcupid", "match.com"],
 			"text": "Dude, I hope you filtered out the fatties and the uggos this time!"
-		}]
+		}
+		]
 	},
 	"hipster": {
 		"name": "Hipster",
@@ -112,7 +113,7 @@ function getMatchText() {
     return undefined;
 }
 
-function displayCharacter(companion_id) {
+function displayCharacter() {
 	var IMG_URL = chrome.extension.getURL("images/"+ companion_id + '.png');
 
 	var textToDisplay = getMatchText();
