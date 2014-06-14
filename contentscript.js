@@ -1,13 +1,15 @@
 var characterText = [
 	{
-		"urls": ["google"],
-		"text": "You're on google!"
+		"urls": ["google", "bing"],
+		"text": ""
 	},
 	{
 		"urls": ["twitter"],
 		"text": "You're on Twitter!"
 	}
 ]
+
+var HIPSTER_URL = chrome.extension.getURL('hipster.png');
 
 function getMatchText() {
 	//TODO put characterText in separate json file
@@ -26,7 +28,7 @@ function getMatchText() {
 }
 
 jQuery(document).ready(function($) {
-    $("body").append("<div id='character'></div>");
+    $("body").append("<img id='character' src='"+ HIPSTER_URL +"'>");
 
     alert(getMatchText());
 });
