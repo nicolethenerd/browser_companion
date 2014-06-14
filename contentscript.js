@@ -55,8 +55,19 @@ var characters =
 			{
 				"urls": ["okcupid", "tinder"],
 				"text": "Hey, gurrrrl."
-			}
-		]
+			},
+			{
+				"urls": ["netflix"],
+				"text": "Hey girl, one of the advantages to being alone is that you can stream all of my movies on Netflix without judgement."
+			}]
+	},
+	"snitch": {
+		"name": "snitch",
+		"text": [
+			{
+				"urls": ["harrypotter"],
+				"text": "Catch me if you can!"
+			}]
 	}
 }
 
@@ -107,6 +118,15 @@ function animateBieber() {
   });
 }
 
+function animateSnitch() {
+  $('#character').hover(function() {
+    $('#character').animate({ bottom: '-=120' }, 1000);
+  }, function() {
+    $('#character').animate({ bottom: '+=120' }, 1000);
+  });
+}
+
+
 jQuery(document).ready(function($) {
 	chrome.storage.sync.get("companion", function(data) {
 
@@ -124,8 +144,8 @@ jQuery(document).ready(function($) {
 			animateBieber();
 		} else if (IMG_URL.indexOf("kale") >= 0 ) {
 			//TBD
-		} else {
-			//TBD
+		} else if (companion_id === "snitch") {
+			animateSnitch();
 		}
 		else if(companion_id === "rat")
 		{
