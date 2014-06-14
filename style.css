@@ -1,11 +1,11 @@
 #character {
 	position: fixed;
-	bottom: 10px;
+	bottom: -2px;
 	right: 10px;
 }
 
 #character img {
-	height: 100px;
+	height: 200px;
 }
 
 .hide {
