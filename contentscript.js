@@ -1,3 +1,5 @@
+var companion_id = "hipster";
+
 //TODO put characters in separate json file
 var characters = 
 {
@@ -17,13 +19,24 @@ var characters =
 		}]
 	},
 	"bieber": {
+		"name": "Justin Bieber",
+		"text": [{
+			"urls": ["webmd"],
+			"text": [
+				"Wow, you’re going to have to pay a lot for that being that you’re in the US.", 
+				"The remedy for that will cost you aboot $50,000.",
+				"Theres a good chance thats terminal, aye!"
+			]
+		}]
+	},
+	"kale": {
 		"name": "",
 		"text": []
 	}
 }
 
 function getMatchText() {
-	var characterText = characters.hipster.text;
+	var characterText = characters[companion_id].text;
 
     for(var i = 0; i < characterText.length; i++)
     {
@@ -33,7 +46,11 @@ function getMatchText() {
     		var url = matchObject.urls[j];
     		if(location.hostname.indexOf(url) > -1)
     		{
-    			return matchObject.text;
+    			if(typeof matchObject.text == "string")
+	    			return matchObject.text;
+	    		else {
+	    			return matchObject.text[parseInt(Math.random()*matchObject.text.length+1)];
+	    		}
     		}
     	}
     }
@@ -52,8 +69,8 @@ function displayText() {
 
 jQuery(document).ready(function($) {
 	chrome.storage.sync.get("companion", function(data) {
-		var companion_id = data.companion;
-		var IMG_URL = chrome.extension.getURL(companion_id + '.png');
+		companion_id = data.companion;
+		var IMG_URL = chrome.extension.getURL("images/"+ companion_id + '.png');
 
 		$("body").append("<div id='character'><span class='tooltip hide'></span><img src='"+ IMG_URL +"'></div>");
 
