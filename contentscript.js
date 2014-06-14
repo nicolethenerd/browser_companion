@@ -15,6 +15,10 @@ var characters =
 		"urls": ["reddit"],
 		"text": "OMG YOU ARE ON REDDIT I AM ONLY WRITING THIS SENTENCE TO TEST HOW THE TOOLTIP LOOKS LIKE LOREM IPSUM IPSUM"
 		}]
+	},
+	"bieber": {
+		"name": "",
+		"text": []
 	}
 }
 
@@ -47,12 +51,18 @@ function displayText() {
 }
 
 jQuery(document).ready(function($) {
+	chrome.storage.sync.get("companion", function(data) {
+		var companion_id = data.companion;
+		var IMG_URL = chrome.extension.getURL(companion_id + '.png');
 
-	var IMG_URL = chrome.extension.getURL('hipster.png');
+		$("body").append("<div id='character'><img src='"+ IMG_URL +"'><span class='tooltip hide'></span></div>");
 
-    $("body").append("<div id='character'><img src='"+ IMG_URL +"'><span class='tooltip hide'></span></div>");
+   		displayText();
+	});
 
-    displayText();
+	
+
+   
 }); //document ready
 
 

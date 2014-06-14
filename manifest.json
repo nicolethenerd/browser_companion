@@ -25,7 +25,8 @@
         "storage"
   ],
   "web_accessible_resources": [
-    "hipster.png"
+    "hipster.png",
+    "bieber.png"
   ],
    "options_page": "options.html"
 }
