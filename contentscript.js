@@ -27,7 +27,8 @@ var characters =
 		"text": [{
 			"urls": ["twitter"],
 			"text": "Baby, baby, baby…you’re super witty and clever. Just not within the confines of 140 characters."
-		}]
+		}],
+		"animation": "up-and-down"
 	},
 	"kale": {
 		"name": "Kale",
@@ -36,7 +37,8 @@ var characters =
 				"urls": ["epicurious", "allrecipes"],
 				"text": "Vegans don't only live longer, they have better sex. How long was your last orgasm?"
 			}
-		]
+		],
+		"animation": "up-and-down"
 	},
 	"rat": {
 		"name": "Subway Rat",
@@ -47,7 +49,8 @@ var characters =
 		{
 			"urls": ["twitter"],
 			"text": "Even I have more social interaction than you do."
-		}]
+		}],
+		"animation": "back-and-forth"
 	}
 }
 
@@ -104,9 +107,9 @@ jQuery(document).ready(function($) {
    		if (IMG_URL.indexOf("hipster") >= 0) {
 			animateHipster();
 		}
-		else if(companion_id === "rat")
+		else
 		{
-			$("#character").addClass("animation-target");
+			$("#character").addClass(characters[companion_id].animation);
 		}
 	});
    
