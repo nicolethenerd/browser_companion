@@ -55,13 +55,10 @@ jQuery(document).ready(function($) {
 		var companion_id = data.companion;
 		var IMG_URL = chrome.extension.getURL(companion_id + '.png');
 
-		$("body").append("<div id='character'><img src='"+ IMG_URL +"'><span class='tooltip hide'></span></div>");
+		$("body").append("<div id='character'><span class='tooltip hide'></span><img src='"+ IMG_URL +"'></div>");
 
    		displayText();
 	});
-
-	
-
    
 }); //document ready
 
