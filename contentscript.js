@@ -48,6 +48,15 @@ var characters =
 			"urls": ["twitter"],
 			"text": "Even I have more social interaction than you do."
 		}]
+	},
+	"gosling": {
+		"name": "Ryan Gosling",
+		"text": [
+			{
+				"urls": ["okcupid", "tinder"],
+				"text": "Hey, gurrrrl."
+			}
+		]
 	}
 }
 
