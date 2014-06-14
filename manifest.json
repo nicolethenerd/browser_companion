@@ -1,5 +1,6 @@
 {
   "name": "Browser Bro",
+  "short_name": "Browser Bro",
   "version": "1.0",
   "manifest_version": 2,
   "description": "Bro down and browse the web! Or select one of our other entertaining and helpful browser buddies.",
