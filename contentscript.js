@@ -6,6 +6,10 @@ var characterText = [
 	{
 		"urls": ["twitter"],
 		"text": "You're on Twitter!"
+	},
+	{
+		"urls": ["reddit"],
+		"text": "OMG YOU ARE ON REDDIT I AM ONLY WRITING THIS SENTENCE TO TEST HOW THE TOOLTIP LOOKS LIKE LOREM IPSUM IPSUM"
 	}
 ]
 
