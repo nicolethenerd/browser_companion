@@ -49,6 +49,10 @@ var characters =
 		{
 			"urls": ["twitter"],
 			"text": "Even I have more social interaction than you do."
+		},
+		{
+			"urls": ["reddit"],
+			"text": "Everyday I manage to avoid rat poison and deadly traps and you can't even steer past click-bait."
 		}],
 		"animation": "back-and-forth"
 	},
@@ -97,12 +101,30 @@ function getMatchText() {
     return undefined;
 }
 
-function displayText() {
+function displayCharacter(companion_id) {
+	var IMG_URL = chrome.extension.getURL("images/"+ companion_id + '.png');
+
 	var textToDisplay = getMatchText();
 	if(textToDisplay != undefined)
 	{
+		$("body").append("<div id='character'><span class='tooltip hide'></span><img src='"+ IMG_URL +"'></div>");
+
 		$(".tooltip").html(textToDisplay);
 		$(".tooltip").css('opacity', 1);
+
+		if (companion_id === "hipster") {
+			//animateHipster();
+		} else if (companion_id === "bieber") {
+			animateBieber();
+		} else if (companion_id === "kale") {
+			//TBD
+		} else if (companion_id === "snitch") {
+			animateSnitch();
+		}
+		else
+		{
+			$("#character img").addClass(characters[companion_id].animation);
+		}
 	}
 	
 }
@@ -123,7 +145,6 @@ function animateBieber() {
 }
 
 function animateSnitch() {
-	          tLeft = 1000-Math.floor(Math.random()*900);
   $('#character').hover(function() {
     $('#character').animate({ bottom: '-=120' }, 1000);
   }, function() {
@@ -131,31 +152,12 @@ function animateSnitch() {
   });
 }
 
-
 jQuery(document).ready(function($) {
 	chrome.storage.sync.get("companion", function(data) {
 
 		companion_id = data.companion;
-		var IMG_URL = chrome.extension.getURL("images/"+ companion_id + '.png');
 
-
-		$("body").append("<div id='character'><span class='tooltip hide'></span><img src='"+ IMG_URL +"'></div>");
-
-   		displayText();
-
-   		if (companion_id === "hipster") {
-			//animateHipster();
-		} else if (companion_id === "bieber") {
-			animateBieber();
-		} else if (companion_id === "kale") {
-			//TBD
-		} else if (companion_id === "snitch") {
-			animateSnitch();
-		}
-		else
-		{
-			$("#character").addClass(characters[companion_id].animation);
-		}
+   		displayCharacter(companion_id);
 	});
    
 }); //document ready
