@@ -8,6 +8,10 @@ var characters =
 		"text": [{
 			"urls": ["epicurious", "allrecipes"],
 			"text": "Step 1) Cook protein Step 2) Eat protein. Boom!"
+		},
+		{
+			"urls": ["okcupid", "match.com"],
+			"text": "Dude, I hope you filtered out the fatties and the uggos this time!"
 		}]
 	},
 	"hipster": {
