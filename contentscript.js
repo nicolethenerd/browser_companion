@@ -25,11 +25,25 @@ function getMatchText() {
     		}
     	}
     }
+    return undefined;
+}
+
+function displayText() {
+	var textToDisplay = getMatchText();
+	if(textToDisplay != undefined)
+	{
+		$(".tooltip").html(textToDisplay);
+		$(".tooltip").css('opacity', 1);
+	}
+	
 }
 
 jQuery(document).ready(function($) {
-    $("body").append("<img id='character' src='"+ HIPSTER_URL +"'>");
+    $("body").append("<div id='character'><img src='"+ HIPSTER_URL +"'><span class='tooltip hide'></span></div>");
 
-    alert(getMatchText());
-});
+    displayText();
+}); //document ready
+
+
+
 
