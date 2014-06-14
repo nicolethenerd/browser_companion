@@ -124,7 +124,6 @@ function animateBieber() {
 
 function animateSnitch() {
 	          tLeft = 1000-Math.floor(Math.random()*900);
-	          alert(tLeft);
   $('#character').hover(function() {
     $('#character').animate({ bottom: '-=120' }, 1000);
   }, function() {
