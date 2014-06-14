@@ -3,8 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Browser Bro Options</title>
+	<style>
+		@import url(http://fonts.googleapis.com/css?family=Lato:100);
+
+		body {
+			font-family: 'Lato', sans-serif;
+		}
+
+		#selected_img {
+			height: 200px;
+		}
+	</style>
 </head>
 <body>
+
+<h1>Browser Bro Options</h1>
 
 Choose a browser buddy:
 <select id="companion">
@@ -17,9 +30,13 @@ Choose a browser buddy:
  <option value="snitch">The Golden Snitch</option>
 </select>
 
+<div>
+	<img id="selected_img" src="images/bro.png">
+</div>
 <div id="status"></div>
 <button id="save">Save</button>
 
+<script type="text/javascript" src="jquery-1.8.1.min.js"></script>
 <script src="options.js"></script>
 
 </body>
