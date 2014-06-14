@@ -1,7 +1,7 @@
 var characterText = [
 	{
 		"urls": ["google", "bing"],
-		"text": ""
+		"text": "gooooogle"
 	},
 	{
 		"urls": ["twitter"],
