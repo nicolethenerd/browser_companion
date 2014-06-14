@@ -22,8 +22,10 @@
         "css": ["style.css"]
     } ],
   "permissions": [
+        "storage"
   ],
   "web_accessible_resources": [
     "hipster.png"
-  ]
+  ],
+   "options_page": "options.html"
 }
