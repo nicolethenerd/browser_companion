@@ -26,8 +26,12 @@ function getMatchText() {
 }
 
 jQuery(document).ready(function($) {
-    $("body").append("<div id='character'></div>");
 
-    alert(getMatchText());
-});
+    $("body").append("<div id='character'><span class=\"tooltip\">I am a tooltip!</span></div>");
+   
+
+}); //document ready
+
+
+
 
