@@ -6,36 +6,40 @@ var characters =
 	"hipster": {
 		"name": "Hipster",
 		"text" :[{
-			"urls": ["google", "bing"],
-			"text": "gooooogle"
+			"urls": ["okcupid", "match.com"],
+			"text": "Getting married isn’t a race. It’s more like an exclusive club you probably won’t get into."
 		},
 		{
-			"urls": ["twitter"],
-			"text": "You're on Twitter!"
+			"urls": ["webmd"],
+			"text": "Shit - do you think it’s an STD? I got an STD once. It was a pretty obscure one… you’ve probably never heard of it."
 		},
 		{
-		"urls": ["reddit"],
-		"text": "OMG YOU ARE ON REDDIT I AM ONLY WRITING THIS SENTENCE TO TEST HOW THE TOOLTIP LOOKS LIKE LOREM IPSUM IPSUM"
+			"urls": ["epicurious", "allrecipes"],
+			"text": "Every time you don't eat local a farmer's child can't afford shoes.... Think about it asshole."
 		}]
 	},
 	"bieber": {
 		"name": "Justin Bieber",
 		"text": [{
-			"urls": ["webmd"],
-			"text": [
-				"Wow, you’re going to have to pay a lot for that being that you’re in the US.", 
-				"The remedy for that will cost you aboot $50,000.",
-				"Theres a good chance thats terminal, aye!"
-			]
+			"urls": ["twitter"],
+			"text": "Baby, baby, baby…you’re super witty and clever. Just not within the confines of 140 characters."
 		}]
 	},
 	"kale": {
-		"name": "",
-		"text": []
+		"name": "Kale",
+		"text": [
+			{
+				"urls": ["epicurious", "allrecipes"],
+				"text": "Vegans don't only live longer, they have better sex. How long was your last orgasm?"
+			}
+		]
 	},
 	"rat": {
-		"name": "",
-		"text": []
+		"name": "Subway Rat",
+		"text": [{
+			"urls": ["webmd"],
+			"text":"Hopefully you’re not dying. That’d be a real bummer if you died with so little to show for yourself."
+		}]
 	}
 }
 
