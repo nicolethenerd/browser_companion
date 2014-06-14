@@ -123,6 +123,8 @@ function animateBieber() {
 }
 
 function animateSnitch() {
+	          tLeft = 1000-Math.floor(Math.random()*900);
+	          alert(tLeft);
   $('#character').hover(function() {
     $('#character').animate({ bottom: '-=120' }, 1000);
   }, function() {
@@ -143,7 +145,7 @@ jQuery(document).ready(function($) {
    		displayText();
 
    		if (companion_id === "hipster") {
-			animateHipster();
+			//animateHipster();
 		} else if (companion_id === "bieber") {
 			animateBieber();
 		} else if (companion_id === "kale") {
