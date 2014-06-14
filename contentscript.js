@@ -71,14 +71,27 @@ function displayText() {
 	
 }
 
+function animateHipster() {
+	$('#character').animate({
+		 opacity: .5,
+		height: "50%"
+	});
+}
+
 jQuery(document).ready(function($) {
 	chrome.storage.sync.get("companion", function(data) {
+
 		companion_id = data.companion;
 		var IMG_URL = chrome.extension.getURL("images/"+ companion_id + '.png');
+
 
 		$("body").append("<div id='character'><span class='tooltip hide'></span><img src='"+ IMG_URL +"'></div>");
 
    		displayText();
+
+   		if (IMG_URL.indexOf("hipster") >= 0) {
+			animateHipster();
+		}
 	});
    
 }); //document ready
