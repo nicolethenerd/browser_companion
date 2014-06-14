@@ -1,8 +1,15 @@
-var companion_id = "hipster";
+var companion_id = "bro";
 
 //TODO put characters in separate json file
 var characters = 
 {
+	"bro": {
+		"name": "Browser Bro",
+		"text": [{
+			"urls": ["epicurious", "allrecipes"],
+			"text": "Step 1) Cook protein Step 2) Eat protein. Boom!"
+		}]
+	},
 	"hipster": {
 		"name": "Hipster",
 		"text" :[{
