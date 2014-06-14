@@ -32,6 +32,10 @@ var characters =
 	"kale": {
 		"name": "",
 		"text": []
+	},
+	"rat": {
+		"name": "",
+		"text": []
 	}
 }
 
