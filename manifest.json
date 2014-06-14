@@ -1,5 +1,5 @@
 {
-  "name": "McKayla Is Not Impressed",
+  "name": "Browser Companion",
   "version": "1.0",
   "manifest_version": 2,
   "description": "McKayla is not impressed with random images as you browse the web.",
@@ -18,7 +18,8 @@
                               "https://www.google.com/search*",
                               "http://www.google.com/search*"
                             ],
-        "run_at": "document_end"
+        "run_at": "document_end",
+        "css": ["style.css"]
     } ],
   "permissions": [
   ],
