@@ -138,11 +138,11 @@ jQuery(document).ready(function($) {
 
    		displayText();
 
-   		if (IMG_URL.indexOf("hipster") >= 0) {
+   		if (companion_id === "hipster") {
 			animateHipster();
-		} else if (IMG_URL.indexOf("bieber") >= 0) {
+		} else if (companion_id === "bieber") {
 			animateBieber();
-		} else if (IMG_URL.indexOf("kale") >= 0 ) {
+		} else if (companion_id === "kale") {
 			//TBD
 		} else if (companion_id === "snitch") {
 			animateSnitch();
