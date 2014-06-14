@@ -51,6 +51,16 @@ var characters =
 			"text": "Even I have more social interaction than you do."
 		}],
 		"animation": "back-and-forth"
+	},
+	"gosling": {
+		"name": "Ryan Gosling",
+		"text": [
+			{
+				"urls": ["okcupid", "tinder"],
+				"text": "Hey, gurrrrl."
+			}
+		],
+		"animation": "up-and-down"
 	}
 }
 
@@ -93,6 +103,14 @@ function animateHipster() {
 	});
 }
 
+function animateBieber() {
+  $('#character').toggle(function() {
+    $('#character').animate({ bottom: '-=120' }, 1000);
+  }, function() {
+    $('#character').animate({ bottom: '+=120' }, 1000);
+  });
+}
+
 jQuery(document).ready(function($) {
 	chrome.storage.sync.get("companion", function(data) {
 
@@ -106,6 +124,12 @@ jQuery(document).ready(function($) {
 
    		if (IMG_URL.indexOf("hipster") >= 0) {
 			animateHipster();
+		} else if (IMG_URL.indexOf("bieber") >= 0) {
+			animateBieber();
+		} else if (IMG_URL.indexOf("kale") >= 0 ) {
+			//TBD
+		} else {
+			//TBD
 		}
 		else
 		{
